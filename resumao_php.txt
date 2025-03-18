@@ -1,0 +1,134 @@
+//Resumão básico PHP
+
+<?php
+	//PHP = Personal Home Page
+
+	//Variáveis
+	
+	$nome = 'Judah';
+	echo 'O meu nome é '.$nome;
+
+	//Variável de variável
+	
+	$nome = 'Judah';
+	$Judah = 'Opa opa!';
+	echo 'O meu nome é '.$$nome;
+
+	//Concatenar
+	//O sinal de ponto
+	echo 'O meu nome é '.$$nome;
+
+	//Comparar valores
+	
+	$nome = 'Judah';
+	$Judah = 'Opa opa!';
+
+	if($nome == 'Judah'){
+	    echo 'Verdadeiro';
+	} else {
+	    echo 'Falso';
+	}
+
+	//Diferença entre '==' e '==='
+
+	$idade = '19';
+	
+	if ($idade == 19) {
+	     echo 'Verdadeiro';
+	} else {
+	     echo 'Falso';
+	}
+	//Resultado: Verdadeiro
+
+
+	$idade = '19';
+	
+	if ($idade === 19) {
+	     echo 'Verdadeiro';
+	} else {
+	     echo 'Falso';
+	}
+	//Resultado: Falso
+
+
+	//Diferença entre '!=' e '!=='
+
+	$idade = '19';
+	
+	if ($idade !== 19) {
+	     echo 'Verdadeiro';
+	} else {
+	     echo 'Falso';
+	}
+	Resultado: Verdadeiro
+
+	
+	$idade = '19';
+	
+	if ($idade != 19) {
+	     echo 'Verdadeiro';
+	} else {
+	     echo 'Falso';
+	}
+	Resultado: Falso
+
+
+	//Looping
+
+	for ($i = 0; $i <= 10; $i++) {
+	     echo $i;
+             echo '<hr>';
+	}
+
+	
+	$i = 0;
+	while ($i < 10) {
+	     echo $i;
+             echo '<br>';
+	     $i++;
+	}
+
+	
+	//Funções
+
+	printNumero(30);
+	echo '<br>';
+	printNumero ('Judah');
+	function printNumero($n){
+	    echo $n;
+	}
+
+	
+	//Classes
+
+	class Pessoa {
+	    
+	    public $nome;
+	    public $idade;
+
+            public function __construct($nome, $idade) {
+		   $this->nome = $nome;
+		   $this->idade = $idade;
+	    }
+
+	    public function printNomeEIdade(){
+		 echo $this->nome;
+	         echo '<br>';
+	         echo $this->idade;
+            }
+	}
+
+	$pessoa = new Pessoa('Judah', '19');
+	$pessoa->printNomeEIdade();
+	echo '<br>';
+	$pessoa2 = new Pessoa('Judah', '22');
+	$pessoa2->printNomeEIdade();
+
+	
+	//Array
+
+	$arr = ['Pedro','Tiago','João'];
+	echo $arr[0];
+	echo $arr[1];
+
+?>
